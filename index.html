@@ -11,46 +11,58 @@
     <title>Cadastro ACME</title>
 </head>
 
-
 <body>
-    <section>
+    <section class="wrapper">
         <h1>Cadastrar Paciente</h1>
         <main>
             <div class="box">
                 <p>Nome completo:</p>
-                <input placeholder="Digite aqui..." required>
+                <input id="nome" class="input-1" placeholder="Digite aqui..." required>
             </div>
 
             <div class="box">
                 <p>Data de nascimento:</p>
-                <input placeholder="Digite aqui..." required>
+                <input id="dataNascimento" class="input-2" type="date" placeholder="Digite aqui..." required>
             </div>
 
             <div class="box">
                 <p>CPF:</p>
-                <input placeholder="Digite aqui..." required>
+                <input id="cpf" class="input-3" placeholder="Digite aqui..." required>
             </div>
+
             <div class="box">
                 <p>Sexo:</p>
-                <input placeholder="Digite aqui..." required>
+                <select id="sexo" class="input-4" required>
+                    <option value="" disabled selected>Selecione</option>
+                    <option value="Masculino">Masculino</option>
+                    <option value="Feminino">Feminino</option>
+                    <option value="Outro">Outro</option>
+                </select>
             </div>
 
             <div class="box">
                 <p>Endereço:</p>
-                <input placeholder="Digite aqui...">
+                <input id="endereco" class="input-5" placeholder="Digite aqui...">
             </div>
 
             <div class="box">
                 <p>Status:</p>
-                <input placeholder="Digite aqui..." required>
+                <select id="status" class="input-6" required>
+                    <option value="" disabled selected>Selecione</option>
+                    <option value="Ativo">Ativo</option>
+                    <option value="Inativo">Inativo</option>
+                </select>
             </div>
-            <button type="submit" class="submit-button">Cadastrar</button>
 
+            <button type="submit" class="submit-button" onclick="cadastrarPaciente()">Cadastrar</button>
         </main>
+
+        <h2>Lista de Pacientes</h2>
+        <input id="filterNome" placeholder="Filtrar por nome..." oninput="listarPacientes()">
+        <ul id="listaPacientes"></ul>
     </section>
 
-    <img src="file (1).png" alt="Logotipo">
-
+    <script src="script.js"></script>
 </body>
 
 </html>

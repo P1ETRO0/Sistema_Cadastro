@@ -8,6 +8,8 @@
 }
 
 body {
+    height: 100%;
+    width: 100%;
     background-color: #ecebeb;
     display: flex;
     align-items: center;
@@ -21,44 +23,48 @@ main {
 }
 
 section {
-    border: 3px solid #ecebeb;
+    width: 97%;
+    height: 97%;
+    border: 3px solid #dddcdc;
     border-radius: 2px;
     padding: 20px;
+    background-color: white;
 }
 
 p {
-    height: 0px;
-    margin: 23px;
+    font-weight: 700;
+    margin: 23px 0;
 }
 
-.box input {
-    border: 3px solid #000000;
+.box input,
+.box select {
+    border: 3px solid #424242;
     border-radius: 10px;
     height: 50px;
-    width: 812px;
+    width: 500px;
     margin: 20px;
-}
-
-img {
-    height: 600px;
-    position: absolute;
-    margin-right: 66%;
-    margin-top: -28%;
+    padding: 20px 45px 20px 20px;
+    font-size: 16px;
 }
 
 h1 {
     color: #db0e0e;
-    font-size: 80px;
+    font-size: 70px;
     text-align: center;
-    padding: 3%;
+    margin-top: 1%;
+}
+
+h2 {
+    margin-top: 84px;
+    margin-left: 24px;
 }
 
 .submit-button {
-    margin-top: 4%;
-    width: 95%;
+    margin-top: 3%;
+    width: 500px;
     height: 50px;
     background-color: #c90e0e;
-    border: none;
+    border: 3px solid #424242;
     border-radius: 10px;
     color: #ecebeb;
     font-size: 18px;
@@ -68,8 +74,50 @@ h1 {
 
 .submit-button:hover {
     background-color: #e72c2c;
+    text-decoration: underline; 
 }
 
-.box input::placeholder {
+.box input::placeholder,
+.box select::placeholder {
     color: #797878;
+}
+
+#filterNome {
+    border: 3px solid #424242;
+    border-radius: 10px;
+    height: 50px;
+    width: 500px;
+    margin: 20px;
+    padding: 20px 45px 20px 20px;
+    font-size: 16px;
+}
+
+#listaPacientes {
+    list-style-type: none;
+    padding: 20px;
+}
+
+#listaPacientes li {
+    border: 1px solid #424242;
+    border-radius: 10px;
+    margin: 10px 0;
+    padding: 20px;
+    background-color: #f9f9f9;
+}
+
+#listaPacientes li button {
+    margin-top: 10px;
+    width: 100px;
+    height: 30px;
+    background-color: #c90e0e;
+    border: 2px solid #424242;
+    border-radius: 5px;
+    color: #ecebeb;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+#listaPacientes li button:hover {
+    background-color: #e72c2c;
+    text-decoration: underline; 
 }
